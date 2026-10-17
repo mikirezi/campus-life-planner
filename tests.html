@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campus Planner Tests</title>
+    </head>
+    <body>
+        <main>
+            <h1>Campus Planner Tests</h1>
+            <p id="test-results">Running tests...</p>
+            <section>
+                <h2>Regex validation tests</h2>
+                <ul id="validation-results"></ul>
+            </section>
+            <section>
+                <h2>Search tests</h2>
+                <ul id="search-results"></ul>
+            </section>
+        </main>
+        <script type="module">
+            import { validateRecord } from "./scripts/validators.js";
+            import { compileRegex, recordMatches } from "./scripts/search.js";
+            const validationResults =
+            document.querySelector("#validation-results");
+            const searchResults =
+            document.querySelector("#search-results");
+            function addResult(list, name, passed) {
+                const item = document.createElement("li");
+                item.textContent =
+                `${passed ? "PASS" : "FAIL"}: ${name}`;
+                list.appendChild(item);
+                return passed;
+            }
+            let passedTests = 0;
+            let totalTests = 0;
+            function test(name, condition, list) {
+                totalTests++;
+                if (addResult(list, name, condition)) {
+                    passedTests++;
+                }
+            }
+            const validRecord = {.
+                id: "test-001",
+                title: "Python Assignment",
+                dueDate: "2026-10-20",
+                duration: 90,
+                tag: "Assignment",
+                time: "10:00"
+            };
+            const invalidRecord = {
+                id: "test-002",
+                title: " Python Assignment ",
+                dueDate: "2026-10-20",
+                duration: 90,
+                tag: "Assignment",
+                time: "10:00"
+            };
+            test(
+                "Valid record passes validation",
+                Object.keys(validateRecord(validRecord)).length === 0,
+                validationResults
+            );
+            test(
+                "Title with outside spaces fails valiidation",
+                Object.keys(validateRecord(invalidRecord)).length > 0,
+                validationResults
+            );
+            const record = {
+                title: "Python Assignment",
+                tag: "Assignment",
+                dueDate: "2026-10-20",
+                time: "10:00"
+            };
+            const regex = compileRegex("Python");
+            test(
+                "Valid search pattern matches a record",
+                recordMatches(record, regex),
+                searchResults
+            );
+            const invalidRegex = compileRegex("[invalid]");
+            test(
+                "Invalid search pattern is rejected",
+                searchResults
+            );
+            document.querySelector("#test-results").textContent=
+            `${passedTests} of ${totalTests} tests passed.`;
+
+        </script>
+    </body>
+</html>
