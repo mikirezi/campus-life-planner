@@ -26,9 +26,28 @@ function refresh(){
     updateStats(state.records);
     updateTargetMessage();
 }
+function showSection(sectionId) {
+    const sections = document.querySelectorAll("main section");
+    sections.forEach(section => {
+        section.hidden = true;
+    });
+    const selectedSection = document.querySelector(`#${sectionId}`);
+    if (selectedSection) {
+        selectedSection.hidden = false;
+    }
+}
 function updateTargetMessage() {
+    const today = new Date();
+    const sevenDaysAgo = new Date(today);
+    sevenDaysAgo.setDate(today.getDate() - 6);
     const total = state.records.reduce(
-        (sum, record) => sum + Number(record.duration),
+        (sum, record) => {
+            const recordDate = new Date(record.dueDate + "T00:00:00");
+            if (recordDate >= sevenDaysAgo && recordDate <= today) {
+                return sum + Number(record.duration);
+            }
+            return sum;
+        },
         0
     );
     const target = Number(state.settings.weeklyTarget);
@@ -221,4 +240,12 @@ if (darkModeButton) {
         }
     );
 }
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault();
+        const sectionId = link.getAttribute("href").substring(1);
+        showSection(sectionId);
+    });
+});
+showSection("dashboard");
 refresh();

@@ -41,9 +41,13 @@ body{
     color: #24342a;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.25rem;
+    border-radius: 8px;
  }
  nav a:hover{
-    text-decoration: underline;
+   background: #eef5eb;
+    text-decoration: none;
  }
  main{
     width: min(1100px, 92%);
@@ -51,7 +55,7 @@ body{
  }
  section {
     background: white;
-    margin: 2rem 0;
+    margin: 3rem 0;
     padding: 1.5rem;
     border-radius: 14px;
     box-shadow:0 2px 10px rgba(0, 0, 0, 0.05);
@@ -80,7 +84,7 @@ body{
     display: flex;
     align-items: end;
     gap: 0.5rem;
-    min-height; 180px;
+    min-height: 180px;
     padding: 1rem 0;
  }
  .chart-bar {
@@ -133,10 +137,10 @@ body{
  select {
     width: 100%;
     padding: 0.7rem;
-    margin: 0.4rem 0 1 rem;
+    margin: 0.4rem 0 1rem;
     border: 1px solid #bbb;
     border-radius: 8px;
-    font--size: 1rem;
+    font-size: 1rem;
  }
  label {
     display: block;

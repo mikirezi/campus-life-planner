@@ -107,14 +107,18 @@ export function renderChart(records){
         date.setDate(today.getDate() - i);
         const dateString =
         date.toISOString().split("T")[0];
-        const count = records.filter(record => record.dueDate === dateString).length;
+        const totalMinutes = records
+        .filter(record => record.dueDate === dateString)
+        .reduce((sum, record) => sum + Number(record.duration), 0);
         const bar = document.createElement("div");
         bar.className = "chart-bar";
         bar.style.height =
-        `${Math.max(count * 30, 8)}px` ;
+        `${Math.max(totalMinutes, 8)}px` ;
         bar.innerHTML = `
         <div class="chart-label">
         ${date.getMonth() + 1}/${date.getDate()}
+        <br>
+        ${totalMinutes} min
         </div>
                 `;
                 chart.appendChild(bar);
