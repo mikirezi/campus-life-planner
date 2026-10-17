@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Campus Planner</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+   <header>
+    <h1> My Campus Planner</h1>
+    <p>Plan your classes,assigments,quiz and study time in one place</p>
+
+   </header> 
+   <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#planner">planner</a>
+    <a href="#add-record">Add record</a>
+    <a href="#settings">Settings</a>
+    <a href="#about">About</a>
+   </nav>
+   <main id="main-content">
+    <section id="dashboard">
+        <h2>dashboard</h2>
+        <p>here is your overview of your campus plans.</p>
+        <div class="stats-grid">
+            <article class="stat-card">
+                <h3>Total Records</h3>
+                <p id="total-records">0</p>
+                </article>
+                <article class="stat-card">
+                    <h3>Total Study Time</h3>
+                    <p id="total-duration">0 min</p>
+                </article>
+                <aricle class="stat-card">
+                    <h3>Top Category</h3>
+                    <p id="top-category">None</p>
+                </aricle>
+        </div>
+        <h3>Last 7 Days</h3>
+<div id="weekly-chart" class="chart"></div>
+<p id="target-message"
+role="status"
+aria-live="polite"></p>
+    </section>
+    <section id="planner">
+        <h2>my planner</h2>
+        <p>get a look at your classes and assigments here.</p>
+        <label for="search">Search using Regex</label>
+        <input
+        type="search"
+        id="search"
+        placeholder="Example: Assigment"
+        >
+        <label>
+            <input type="checkbox" id="case-sensitive">
+            case sensitive
+            </label>
+            <label for="sort-by">Sort by</label>
+            <select id="sort-by">
+                <option value="date">Date</option>
+                <option value="title">Title A-Z</option>
+                <option value="duration-up">
+                    Duration: Low to High
+                </option>
+                <option value="duration-down">
+                    Duration: High to Low
+                </option>
+            </select>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Due Date</th>
+                            <th>Duration</th>
+                            <th>Category</th>
+                            <th>Time</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody id="records-body"></tbody>
+                </table>
+            </div>
+    </section>
+    <section id="add record">
+     <h2>add a record</h2>
+            <form id="record-form">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title">
+
+        <label for="due-date">due date</label>
+        <input type="date" id="due-date" name="due-date">
+
+        <label for="duration">duration (minutes)</label>
+        <input type="number" id="duration" name="duration" min="0">
+
+        <label for="tag">category</label>
+        <input
+         type="text"
+          id="tag"
+           name="tag" 
+           placeholder="e.g assignment"
+           >
+
+        <label for="time">Time </label>
+        <input type="time" id="time" name="time">
+
+        <p 
+        id="form-errors" 
+        class="form-errors" 
+        aria-live="assertive"
+        ></p>
+        <input type="hidden" id="record-id">
+        <div class="form-actions">
+            <button type="submit">save records</button>
+            <button type="button" id="cancel-edit">cancel</button>
+        </div>
+        <p 
+        id="form-status" 
+        role="status" 
+        aria-live="polite"
+        ></p>
+                 </form>
+    </section> 
+    <section id="settings">
+        <h2>settings</h2>
+
+        <label for="weekly-target">weekly study target (minutes)</label>
+        <input type="number" id="weekly-target" min="0" value="600">
+        <button type="button" id="save-settings">save settings</button>
+        <h3>time conversion</h3>
+
+        <label for="minutes-input">minutes</label>
+        <input type="number" id="minutes-input" min="0" placeholder="example: 120">
+        <p id="hours-output">0 hours</p>
+        <h3>data</h3>
+        <button type="button" id="export-data">export JSON</button>
+        <label for="import-data">import JSON</label>
+        <input type="file" id="import-data" accept=".json">
+        <p id="settings-status" role="status" aria-live="polite"></p>
+
+               </section>  
+               <section id="about">
+                <h2>about my campus planner</h2>
+                <p>
+                    My campus planner helps learners organise their classes,assignments,study sessions and deadlines into one place.
+                </p>
+                <p>
+                    contact:
+                    <a href="mailto:m.ikirezi@alustudent.com">
+                        m.ikirezi@alustudent.com
+                    </a>
+                </p>
+                <p>
+                    Github:
+                    <a href="https://github.com/" target="_blank">
+                        Github
+                    </a>                </p>
+            
+               </section>
+ </main>
+ <footer>
+    <p>My campus planner</p>
+ </footer>
+ <script type="module" src="scripts/app.js"></script>
+
+</body>
+</html>
