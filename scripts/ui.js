@@ -25,15 +25,15 @@ if (state.sortBy === "title"){
 }
 if (state.sortBy === "date") {
     records.sort((a,b) =>
-    a.dueDate.localeCompare(b.duedate)
+    a.dueDate.localeCompare(b.dueDate)
 );
 }
-if (state.sortBy === "durationAsc"){
+if (state.sortBy === "duration-up"){
     records.sort((a,b) =>
     a.duration - b.duration
 );
 }
-if (state.sortBy === "durationDesc") {
+if (state.sortBy === "duration-down") {
     records.sort((a, b) =>
         b.duration - a.duration
     );
@@ -48,7 +48,8 @@ records.forEach(record => {
     <td>${highlightText(record.title, regex)}</td>
     <td>${highlightText(record.dueDate, regex)}</td>
     <td>${record.duration} minutes</td>
-    </td>${highlightText(record.tag, regex)}</td>
+    <td>${highlightText(record.tag, regex)}</td>
+    <td>${highlightText(record.time || "", regex)}</td>
     <td>
     <button class="edit-button" data-id="${record.id}">
     Edit
