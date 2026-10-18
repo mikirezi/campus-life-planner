@@ -28,5 +28,75 @@
         "time": "09:00",
         "createdAt":"2026-10-17T08:20:00.000Z",
         "updatedAt": "2026-10-17T08:20:00.000Z"
-    }
+    },
+    {
+        "id": "seed-004",
+        "title": "Linux Practice",
+        "dueDate": "2026-10-19",
+        "duration": 15,
+        "tag": "Practice",
+        "time":"07:30",
+        "createdAt": "2026-10-17T08:30:00.000Z",
+        "updatedAt": "2026-10-17T08:30:00.000Z"
+    },
+    {
+        "id": "seed-005",
+        "title": "Final Project Research",
+        "dueDate": "2026-10-25",
+        "duration": 300,
+        "tag": "Research",
+        "time": "16:45",
+        "createdAt": "2026-10-17T08:40:00.000Z",
+        "updatedAt": "2026-10-17T08:40:00.000Z"
+    },
+    {
+        "id": "seed-006",
+        "title": "HTML & CSS Review",
+        "dueDate": "2026-11-01",
+        "duration": 45,
+        "tag": "Review",
+        "time": "11:15",
+        "createdAt": "2026-10-17T08:50:00.000Z",
+        "updatedAt": "2026-10-17T08:50:00.000Z"
+    },
+    {
+        "id": "seed-007",
+        "title": "Database Design 101",
+        "duration": 1,
+        "dueDate": "2026-10-17",
+        "tag": "Database",
+        "time": "08:00",
+        "createdAt": "2026-10-17T09:00:00.000Z",
+        "updatedAt": "2026-10-17T09:00:00.000Z"
+        },
+        {
+            "id": "seed-008",
+            "title": "Group Presentation Preparation",
+            "dueDate": "2026-12-31",
+            "duration": 999,
+            "tag": "presentation",
+            "time": "23:59",
+            "createdAt": "2026-10-17T09:10:00.000Z",
+            "updatedAt": "2026-10-17T09:10:00.000Z"  
+        },
+        {
+        "id": "seed-009",
+        "title": "Career Planning - CV & Interview",
+        "dueDate": "2026-09-30",
+        "duration": 75,
+        "tag": "Career Planning",
+        "time": "13:20",
+        "createdAt": "2026-10-17T09:20:00.000Z",
+        "updatedAt": "2026-10-17T09:20:00.000Z"
+        },
+        {
+            "id":"seed-010",
+            "title": "End of Semester Reflection",
+            "dueDate": "2027-01-01",
+            "duration": 30,
+            "tag": "Reflection",
+            "time": "00:05",
+            "createdAt": "2026-10-17T09:30:00.000Z",
+            "updatedAt": "2026-10-17T09:30:00.000Z"
+        }
 ]
