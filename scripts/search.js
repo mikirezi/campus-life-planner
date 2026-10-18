@@ -15,7 +15,7 @@ export function recordMatches(record, regex) {
     ${record.title}
     ${record.tag}
     ${record.dueDate}
-    ${reccord.time|| ""}
+    ${record.time|| ""}
     `;
     return regex.test(text);
 }

@@ -40,7 +40,7 @@
                     passedTests++;
                 }
             }
-            const validRecord = {.
+            const validRecord = {
                 id: "test-001",
                 title: "Python Assignment",
                 dueDate: "2026-10-20",
@@ -78,9 +78,10 @@
                 recordMatches(record, regex),
                 searchResults
             );
-            const invalidRegex = compileRegex("[invalid]");
+            const invalidRegex = compileRegex("[invalid");
             test(
                 "Invalid search pattern is rejected",
+                invalidRegex === null,
                 searchResults
             );
             document.querySelector("#test-results").textContent=
