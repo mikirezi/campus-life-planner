@@ -1,26 +1,28 @@
 # My Campus Planner 
 ## Live Website
 https://mikirezi.github.io/campus-life-planner/
+## Demo Video
+https://youtu.be/La1vmmz9CbM
 ## Theme 
 Campus Life Planner
 ## About the project
-My campus Planner is a simple responsive web application designed to mostly help and support university students organise their classes,assignments,quizzes,study sessions in one place.
+My campus Planner is a simple responsive web application designed to mostly help and support university students organise their classes, assignments,quizzes, study  sessions in one place.
 The application allows students to add, edit, delete, search and sort their campus records while also tracking their study time and weekly study target.
 ## Features
-- add and manage campus records
-- edit and delete records
-- search records using regular expressions
+- Add and manage campus records
+- Edit and delete records
+- Search records using regular expressions
 - sort records by date, title and duration
-- track total study time
-- view the most common category 
-- view the study activity for the last 7 days 
-- set a weekly study target
-- convert minutes into hours
-- save records using localStorage
-- export planner data as JSON
-- import and validate JSON data 
-- responsive design for phones, tablets and desktops 
-- keyboard-friendly navigation and accessible status messages
+- Track total study time
+- View the most common category
+- View study activity for the last 7 days
+- Set a weekly study target
+- Convert minutes into hours
+- Save records using localStorage 
+- Export planner data as JSON
+- Import and validate JSON data
+- Responsive design for phones, tablets and desktops
+- Keyboard-friendly navigation and accessible status messages
 ## Regex catalog
 ### Title validation
 Pattern:
@@ -54,29 +56,30 @@ Example that fails: `Python Python`
 This rule uses a back-reference to detect repeated words.
 ## Accessibility
 The application includes:
-- semantic HTML landmarks such as header, nav, main, section and footer
-- labels connected to form inputs
-- visible keyboard focus styles
-- a skip-to-content link
+- Semantic HTML landmarks such as header, nav, main, section and footer
+- Labels connected to form inputs
+- Visible keyboard focus styles
+- Keyboard-friendly navigation
+- A skip-to-content link
 - ARIA live messages for important updates
-- responsive layouts for mobile, tablet and desktop screens
-- reduced-motion support for users who prefer less animation
+- Responsive layouts for mobile, tablet and desktop
+- Reduced-motion support for users who prefer less animation
 ## Keyboard map
 - Tab: Move between interactive elements
 - Shift + Tab: Move backwards
-- Enter: Activate links and buttons
-- Space: activate buttons and checkboxes
+- Enter: Activate buttons and checkboxes 
+- Space: Activate buttons and checkboxes
 - Arrow keys: Navigate select options
 ## Testing
-Open `tests.html` in a browser to run the validation and search tests.
+Open `tests.html` in a browser to run the validation and search tests
 The test page checks:
 - Valid record validation
 - Invalid title validation
 - Valid regex search
-- Invalid regex search 
-## How to run the project 
+- Invalid regex search
+## How to run the project
 1. Clone the repository from Github
-2. Open the project folder in vs code 
-3. Open `index.html` using a local development server such as live server
-4. Use the navigation menu to access the Dashboard, planner, add record, settings and about section
+2. Open the project folder in visual studio code
+3. Open `index.html` using a local development server such as Live server
+4. Use the navigation menu to access the Dashboard, Planner, Add Record, settings and About sections.
 
