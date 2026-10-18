@@ -155,6 +155,14 @@ body{
     color: #a32020;
     font-weight: bold;
  }
+ #empty-message {
+   color: #a32020;
+   background: #ffe4e4;
+    border: 1px solid #e08a8a;
+    padding: .75rem;
+    border-radius: 8px;
+    font-weight: bold;
+ }
  mark{
     background: #fff09a;
  }

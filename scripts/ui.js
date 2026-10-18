@@ -10,7 +10,8 @@ export function renderRecords(onEdit, onDelete) {
     : null;
     if (state.searchText && !regex){
         if (emptyMessage) {
-        emptyMessage.textContent = "Invalid search pattern,";
+        emptyMessage.textContent = "Invalid search patter.";
+        emptyMessage.hidden = false;
         }
         body.innerHTML ="";
         return;
