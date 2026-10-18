@@ -1,4 +1,6 @@
 # My Campus Planner 
+## Live Website
+https://mikirezi.github.io/campus-life-planner/
 ## Theme 
 Campus Life Planner
 ## About the project
